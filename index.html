@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>調課通知</title>
+  <title>驚嚇通知</title>
   <style>
     body {
       background-color: black;
@@ -18,7 +18,12 @@
     }
     h1 {
       font-size: 3em;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 1.2em;
       margin-bottom: 20px;
+      color: #ccc;
     }
     img {
       max-width: 90%;
@@ -28,6 +33,25 @@
     }
   </style>
 </head>
+<body>
+  <h1>你被發現了！</h1>
+  <h2>👉 點一下畫面聽驚喜音樂 👈</h2>
+  <img src="teacher.png" alt="愚人節快樂圖片">
+
+  <audio id="bgm" loop>
+    <source src="teachermusic.m4a" type="audio/x-m4a">
+    您的瀏覽器不支援音樂播放。
+  </audio>
+
+  <script>
+    window.addEventListener('click', function () {
+      const audio = document.getElementById("bgm");
+      audio.play();
+    }, { once: true });
+  </script>
+</body>
+</html>
+
 <body>
   <h1>你被發現了！</h1>
   <img src="/teacher.png" alt="采老愚人節快樂">
